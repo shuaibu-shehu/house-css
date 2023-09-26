@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-paint:rgb(115, 121, 122);
+    --roof-paint:rgb(167, 167, 170);
+    --roof-color:rgb(140, 4, 4);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #234;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    min-width: 700px;
+    min-height: 540px;
+    background-color: #004a44;
+    z-index: -4;
+
+}
+
+
+/* CLOUD SESSION STARTED */
+.cloud-1,.cloud-1::before,.cloud-1::after,
+.cloud-2,.cloud-2::before,.cloud-2::after,
+.cloud-4,.cloud-4::before,.cloud-4::after{
+    position: absolute;
+    background-color: white;
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: -3;
+}
+
+/* CLOUD ONE */
+.cloud-1{
+   
+    top: 70px;
+    left: 16px;
+}
+.cloud-1::before{
+    content: '';
+    transform: translate(-20px);
+    top: 0px;
+    left: 50%;
+
+
+}
+
+.cloud-1::after{
+    content: '';
+    top: -50px;
+    left: 50px;
+    width: 130px;
+    height: 150px;
+}
+/* CLOUD ONE SESSION ENDED */
+
+/* CLOUD TWO SESSION STARTED */
+
+.cloud-2{
+    top: 50px;
+    transform: translate(-24px);
+}
+.cloud-2::before{
+    content: '';
+    top: 9px;
+
+}
+.cloud-2::after{
+    content: "";
+    top: -42px;
+    left: -42px;
+}
+/* CLOUD 2 SESSION ENDED */
+
+
+/* CLOUD 3 SESSION STARTED*/
+
+.cloud-3{
+    position: absolute;
+    top: -10px;
+    transform: translate(63px);
+    background-color: white;
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: -3;
+}
+/* CLOUD 3 SESSION ENDED */
+
+
+.cloud-4{
+     transform: translateY(-60px);
+     right: 60px;
+    
+}
+
+.cloud-4::before{
+    content: '';
+    top: -50px;
+    left: -90px;
+}
+/* CLOUD 3 SESSION ENDED */
+
+
+/* CLOUD SESSION ENDED */
+
+/*MAIN SESSION */
+
+.main{
+    position: relative;
+    width: 650px;
+    min-width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(24, 24, 24, 0);
+
+}
+
+/* BUILDING 1 STARTED */
+.building-1{
+    position: absolute;
+    width: 289px;
+    height: 180px;
+    background-color: var(--body-paint);
+    top: 50%;
+    left: 30%;
+    transform: translateX(-50%);
+    border-top: 5px solid transparent;
+    z-index: 3;
+    border-left: 6px solid var(--roof-paint);
+    border-right: 6px solid var(--roof-paint);
+}
+.building-1::before{
+    position: absolute;
+    content:'';
+    left: 50%;
+    top: -155px;
+    transform: translate(-50%);
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 150px solid rgb(50, 48, 48);
+    
+      
+}
+.roof{
+    position: absolute;
+    width: 214px;
+    height: 219px;
+    background-color:transparent;
+    top: -117px;
+    left: 26px;
+    border: 18px solid silver;
+    border-bottom-color: transparent;
+    border-right: transparent;
+    transform: rotate(45deg);
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 4px;
+    
+}
+.roof::before{
+    content: "";
+    position: absolute;
+    left: -58px;
+    width: 310px;
+    height: 19px;
+    top: 80px;
+    background-color: silver;
+    transform: rotate(-45deg) translateX(-7px);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 14px;
+}
+.building-1::after{
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    content:'';
+   width: 70px;
+   height: 70px;
+   background: rgb(137, 129, 129);
+   background-image:linear-gradient(to right,transparent 10%, transparent 90%, rgb(74, 74, 81) 90%),
+   linear-gradient(to bottom, transparent 10%, rgb(109, 112, 109) 10%,rgb(87, 94, 87) 90%);
+   background-size: 10px 23px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.entry{
+    position: absolute;
+    left: 25%;
+    top: 50%px;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 100px;
+    height: 70px;
+    background-color: rgb(85, 60, 60);
+    border-left: 5px solid var(--roof-paint);
+    border-right: 5px solid var(--roof-paint);
+
+}
+
+.entry::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px; 
+    background-color: transparent;
+    border: 6px solid silver;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(45deg);
+    top: -38px;
+    left: 1px;
+    overflow: hidden;
+    z-index: 1;
+
+
+}
+.entry::after{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px; 
+    background-color:  rgb(85, 60, 60);
+    transform: rotate(45deg);
+    top: -35px;
+    left: 11px;
+    z-index: -1;   
+}
+
+.door{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%);
+    width: 50px;
+    height: 75px;
+    border: 3px solid;
+    border-bottom: transparent;
+    background-color: rgb(238, 234, 234);
+    
+}
+.door::before{
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width:41px;
+    height: 69px;
+    background:#323232; 
+    background-image: linear-gradient(to right,transparent 10%, transparent 90%, rgb(41, 28, 29) 90%),
+    linear-gradient(to bottom, transparent 10%, rgb(32, 73, 117) 10%,rgb(41, 49, 41) 90%);
+    background-size: 14px 32px;
+    border: 2px solid rgb(228, 225, 225);
+    border-bottom: 5px s;
+}
+.door::after{
+     content: '';
+     position: absolute;
+     left: 50%;
+     transform: translate(-50%);
+     bottom: 0px;
+     width: 110px;
+     height: 18px;
+     background:#234;
+     background-image: linear-gradient(to bottom, #423f3f 50%, #3513137b 50%);
+     border-radius: 3px;
+}
+
+.window{
+    position: absolute;
+    right:20px;
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    background: #234;
+    background-image:linear-gradient(to right,transparent 10%, transparent 90%, rgb(74, 74, 81) 90%),
+    linear-gradient(to bottom, transparent 10%, rgb(109, 112, 109) 10%,rgb(87, 94, 87) 90%);
+    background-size: 20px 13px;
+    border: 2px solid;
+
+}
+
+
+/*BUILDING 1 ENDED  */
+
+
+/* BUILDING 2 STARTED */
+
+.building-2{
+
+    
+    position: relative;
+    top: 90px;
+    left: 100px;
+    bottom: 0px;
+    width: 250px;
+    height: 180px;
+    background-color: var(--body-paint);
+    border-right: 6px solid var(--roof-paint);
+
+}
+
+.building-2::before{
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 120px;
+    background-color: #323232;
+    top: -109px;
+    transform: skew(45deg) translateX(-90px);
+}
+
+.building-2::after{
+    position: absolute;
+    top: 4px;
+    left: 16px;
+    content: '';
+    width:250px;
+    height: 7px;
+    background-color: var(--roof-paint);
+    transform: skew(45deg);
+}
+
+.chimney{
+    width: 30px;
+    height: 40px;
+    left: 50px;
+    background-color: rgb(86, 87, 88);
+    position: absolute;
+    top: -140px;
+    z-index: -1;
+}
+
+.chimney::before{
+    position: absolute;
+    content: '';
+    width: 44px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 10px;
+    background-color: #5d6765;
+    
+
+}
+.garage{
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%) translate(23px);
+    background: rgb(44, 58, 69);
+    border: #234 3px solid;
+    border-bottom: transparent;
+    background-image:linear-gradient(to right,transparent 10%, transparent 90%, rgb(74, 74, 81) 90%),
+    linear-gradient(to bottom, transparent 10%, rgb(109, 112, 109) 10%,rgb(87, 94, 87) 90%);
+    background-size: 20px 13px;
+}
+
+/* BUILDING 2 ENDED */
+
+
+/*GROUND SESSION HAS STARTED  */
+
+.ground{
+    position: relative;
+    top: -70px;
+    width: 100%;
+    height: 50px;
+    background:linear-gradient(to bottom, rgb(55, 190, 75) 40%, rgb(7, 72, 7), rgba(0, 128, 0, 0.774) 40%) ;
+
+}
+
+.plant-1{
+    position: relative;
+    width: 90px;
+    height: 100px;
+    background-color: rgb(52, 145, 24);
+    top: -139px;
+    left: 1px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: -1;
+}
+.plant-1::after,.plant-2::after{
+        content: '';
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        right: -24px;
+        background: rgb(127, 230, 127);
+        border-radius: 50px;
+    }
+
+
+
+.stand-1,.stand-2{
+    position: absolute;
+    width: 9px;
+    height: 40px;
+    background: #927e7e;
+    bottom: 49px;
+}
+.stand-1{
+      left: 42px;
+}
+
+.stand-1::before,
+.stand-1::after,
+.stand-2::before,
+.stand-2::after{
+
+        position: absolute;
+        content: '';
+        transform: rotate(13deg);
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        border: 5px solid #927e7e;
+        border-bottom-right-radius: 50px;
+        border-bottom:transparent ;
+        border-top: transparent;
+        border-left: transparent;
+}
+
+.stand-1::before{
+    
+    top: 4px;
+    left: -1px;
+  
+}
+.stand-1::after{
+    top: 14px;
+    left: -1px;
+  
+}
+
+.plant-2{
+    position: absolute;
+    width: 90px;
+    height: 100px;
+    background-color: rgb(52, 145, 24);
+    top: -139px;
+    right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.stand-2{
+   right: 62px;
+}
+.stand-2::after{
+    top: 12px;
+}
+
+
+
+.street{
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height:80px;
+    background: rgb(40, 59, 78);
+}
+
+.street div{
+    width: 120px;
+    height: 16px;
+    background: #152f3b;
+    position: absolute;
+    border-top-right-radius: 50%;
+
+}
+
+.p1{
+    top: 40px;
+    left: 10px;
+}
+
+.p2{
+    top: 20px;
+    left: 170px;
+}
+
+.p3{
+    top: 50px;
+    left: 330px;
+}
+
+.p4{
+    top: 14px;
+    right: 190px;
+}
+
+.p5{
+    top: 40px;
+    right: 20px;
+}
+
+@media (max-width:700px) {
+    .container{
+        width:100%;
+        background-color: #234;
+    }
+    .plant-1,.stand-1{
+        display: none;
+    }
+    .plant-2{
+        transform: translateY(2px);
+        right: 70px;
+    }
+    .stand-2{
+        left: 22px;
+        transform: translate(552px);
+    }
+}
